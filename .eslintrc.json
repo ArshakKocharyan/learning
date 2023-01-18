@@ -23,6 +23,7 @@
         "react/prefer-stateless-function": "off",
         "linebreak-style": "off",
         "react/prop-types": "off",
-        "react/state-in-constructor": "off"
+        "react/state-in-constructor": "off",
+        "react/jsx-props-no-spreading": "off"
     }
 }

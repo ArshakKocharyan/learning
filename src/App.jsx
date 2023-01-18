@@ -1,30 +1,19 @@
 import React, { Component } from 'react';
-import { Aside } from './components/Aside/Aside';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header/Header';
+import { Counter } from './pages/Counter/Counter';
+import { Home } from './pages/Home/Home';
 
 export class App extends Component {
-  state = {
-    isOpen: false,
-  };
-
-  handleToggleAside = () => {
-    const { isOpen } = this.state;
-    this.setState({ isOpen: !isOpen });
-  };
-
   render() {
-    const { isOpen } = this.state;
-
     return (
-      <div>
-        <Aside isOpen={isOpen} />
-        <button
-          onClick={this.handleToggleAside}
-          className="btn"
-          type="button"
-        >
-          {isOpen ? 'Close Aside' : 'Open Aside'}
-        </button>
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     );
   }
 }
