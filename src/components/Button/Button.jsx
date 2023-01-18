@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 export class Button extends Component {
   render() {
-    return <button type="button">CLICK</button>;
+    const {
+      text, size, variant,
+      ...rest
+    } = this.props;
+
+    return <button {...rest} type="button">CLICK</button>;
   }
 }

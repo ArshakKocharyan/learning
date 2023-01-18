@@ -10,3 +10,14 @@ body {
     padding: 10px;
     font-size: 24px;
 }
+
+.link {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.link:first-child {
+    margin-right: 30px;
+}
